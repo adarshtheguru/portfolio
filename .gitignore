@@ -1,0 +1,5 @@
+.htaccess
+/mailers
+/mailer
+/node_modules
+/app/images
