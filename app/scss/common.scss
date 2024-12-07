@@ -1,0 +1,37 @@
+.themeBtn{
+    border-radius: 38px;
+    border: 2px solid $siteBlack;
+    padding: 10px 25px;
+    color: $siteBlack;
+    font-size: 2rem;
+    position: relative;
+    &::before{
+        content: url('../images/strips1.webp');
+        position: absolute;
+        top: -25px;
+        right: -30px;
+
+    }
+}
+.urbanist{
+    font-family: $urbanist;
+}
+.siteBlack{
+    color: $siteBlack;
+}
+.dispInBlock{
+    display: inline-block;
+}
+.sc{
+    color: $sc;
+}
+.pc{
+    color: $pc;
+}
+section{
+    position: relative;
+    z-index: 2;
+    &.padding{
+        padding: 7rem 0;
+    }
+}

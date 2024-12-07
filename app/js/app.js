@@ -11,7 +11,7 @@ $(document).ready(function(){
 		isBrochure = 0;
 
 		$('.banner_ht').css('height', bannerHt);
-		$('.section-first').css('margin-top', navHt)
+		$('.bannerTopContentBox').css('padding-top', navHt+30)
 
 		$(".goto-home").on("click", function(){
 			$("html,body").animate({

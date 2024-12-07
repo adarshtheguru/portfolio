@@ -1,0 +1,96 @@
+.hero{
+    height: 100vh;
+    .container{
+        .bannerTopContentBox{
+            width: fit-content;
+            margin: 0 auto;
+            transition: transform 0.5s ease-in-out;
+            .bannerTitle{
+                font-size: 95px;
+                font-weight: 500;
+                line-height: 100%;
+                margin: 10px 0;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: url('../images/strip2.webp');
+                    bottom: -60px;
+                    left: -60px;
+                }
+            }
+        }
+        .devImg{
+            position: relative;
+            .imgWrapper{
+                z-index: 2;
+                position: relative;
+                .ideasImg{
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    transform: scale(0);
+                    transition: transform 0.5s ease-in-out;
+                    transform-origin: bottom;
+                    z-index: -1;
+                }
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -520px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 900px;
+                height: 900px;
+                border-radius: 100%;
+                background: #FEB273;
+                z-index: 1;
+            }
+            .quoteText{
+                position: absolute;
+                top: 25%;
+                left: 0;
+                text-align: left;
+                width: 30%;
+                transition: top 0.5s ease-in-out;
+            }
+            .ratingText{
+                position: absolute;
+                top: 25%;
+                right: 0;
+                text-align: right;
+                width: 30%;
+                transition: top 0.5s ease-in-out;
+                .yearCount{
+                    font-size: 48px;
+                }
+            }
+        }
+        &:hover{
+            .bannerTopContentBox{
+                transform: translateY(200%);
+            }
+            .devImg{
+                .quoteText{
+                    top: -20%;
+                }
+                .ratingText{
+                    top: -20%;
+                }
+                .imgWrapper{
+                    .ideasImg{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+.overview{
+    background: $white url('../images/chocolateBg.webp') no-repeat;
+    background-size: cover;
+    .title{
+        font-size: 48px;
+        font-weight: 500;
+    }
+}
