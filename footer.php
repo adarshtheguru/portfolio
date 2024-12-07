@@ -17,7 +17,7 @@
 	<div class="mob-footer visible-xs">
 		<div class="row">
 			<div class="col-6">
-				<a href="tel:+911234567890" class="mob-call-btn"><span class="sell_do_virtual_numbers">+91 1234 5678
+				<a href="tel:+911234567890" class="mob-call-btn"><span class="">+91 1234 5678
 						90</span></a>
 			</div>
 			<div class="col-6">
@@ -29,78 +29,8 @@
 
 	<script src="https://code.jquery.com/jquery-3.7.0.js"
 		integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<script src="assets/js/all.js"></script>
-
-
-
-	<!-------------------- Ecommerce.js & SellDo script starts --------------------->
-
-	<!-------------------- Ecommerce.js & SellDo script ends ------------------------>
-	<!-- form validation -->
-	<script>
-		var _selldo = [];
-		window.sell_do_form_rendered = function () {
-			$("input[type=phone]").attr('maxlength', '13');
-			$('input[placeholder=Name]').keypress(function (e) {
-				var regex = new RegExp("^[a-zA-Z ]+$");
-				var strigChar = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-				if (regex.test(strigChar)) {
-					return true;
-				}
-				return false
-			});
-			$('input[type=phone]').on('keyup', function () {
-				var val = this.value;
-				var newStr = '';
-				for (var i = 0; i < val.length; i++) {
-					var character = val.charAt(i);
-					var re = new RegExp('[\+0-9]', '');
-					if (re.test(character)) {
-						newStr += character;
-					}
-				}
-				$('input[type=phone]').val(newStr);
-			});
-			setTimeout(function () {
-				$('.sell_do_virtual_numbers').attr('data-event-category', 'Section');
-				$('.sell_do_virtual_numbers').attr('data-event-action', 'Click');
-				$('.sell_do_virtual_numbers').attr('data-event-name', 'Call Number');
-				$('.sell_do_virtual_numbers a').attr('data-event-category', 'Footer');
-				$('.sell_do_virtual_numbers a').attr('data-event-action', 'Click');
-				$('.sell_do_virtual_numbers a').attr('data-event-name', 'Call Number');
-			}, 3000);
-
-			$('.sell_do_ctc_btn').attr('data-event-category', 'Header');
-			$('.sell_do_ctc_btn').attr('data-event-action', 'Click on call me');
-			$('.sell_do_ctc_btn').attr('data-event-name', 'Click to Call');
-			$('.sell_do_form_container .btn').attr('data-event-category', 'Header');
-			$('.sell_do_form_container .btn').attr('data-event-action', 'Click');
-			$('.sell_do_form_container .btn').attr('data-event-name', 'Submit');
-			$(".enq-btn-wrapper .sell_do_form_container .btn").attr('data-event-category', 'section');
-			$('.mob-footer.sell_do_form_container .btn').attr('data-event-name', 'Contact us submit');
-
-			x = setInterval(function () {
-				console.log($(".sell_do_virtual_numbers").html());
-				if ($(".sell_do_virtual_numbers").html() == "+91 20 6705 7005") {
-					clearInterval(x);
-					$(".sell_do_virtual_numbers").html("+91 20 6689 9347");
-				}
-				if ($(".sell_do_virtual_number_mobile").html() == "+91 20 6705 7005") {
-					clearInterval(x);
-					$(".sell_do_virtual_number_mobile").html("020 6689 9347");
-					$(".sell_do_virtual_number_mobile").attr("href", "tel:+912066899347");
-				}
-
-			}, 100);
-		};
-		window.sell_do_form_successfully_submitted = function (data, event) {
-			try {
-				dataLayer.push({
-					'event': 'selldo_form_submitted'
-				});
-			} catch (err) { }
-		}
-	</script>
 
 </body>
 

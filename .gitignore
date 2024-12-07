@@ -3,3 +3,5 @@
 /mailer
 /node_modules
 /app/images
+/connect.php
+/dbconnect.php
