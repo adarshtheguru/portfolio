@@ -34,7 +34,7 @@
 	</div>
 </section>
 
-<section class="padding overview banner_ht" id="overview">
+<section class="padding overview banner_ht " id="overview">
 	<div class="container">
 		<div class="row">
 			<div class="d-flex align-items-center justify-content-between">
